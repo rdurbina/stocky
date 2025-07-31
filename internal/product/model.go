@@ -1,7 +1,7 @@
 package product
 
 import (
-	brand "github.com/rdurbina/stocky/internal/Brand"
+	"github.com/rdurbina/stocky/internal/brand"
 	"github.com/rdurbina/stocky/internal/category"
 )
 
@@ -25,12 +25,12 @@ type CreateRequest struct {
 }
 
 type Response struct {
-	Name        string
-	ID          int
-	Brand       string
-	Category    string
-	Sku         string
-	Description string
-	Price       float64
-	Stock       int
+	ID          int     `json:"id"`
+	Name        string  `json:"name"`
+	Brand       string  `json:"brand"`
+	Category    string  `json:"category"`
+	Sku         string  `json:"sku"`
+	Description string  `json:"description"`
+	Price       float64 `json:"price"`
+	Stock       int     `json:"stock"`
 }

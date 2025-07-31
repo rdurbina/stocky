@@ -5,7 +5,7 @@ import (
 )
 
 type Service struct {
-	//Repository Repository
+	Repository Repository
 }
 
 func (s Service) Save(request CreateRequest) (Response, map[string]string) {
@@ -14,7 +14,9 @@ func (s Service) Save(request CreateRequest) (Response, map[string]string) {
 	err := validate.Struct(request)
 	if err != nil {
 		requestErrors = TranslateErrors(err.(validator.ValidationErrors))
+		return Response{}, requestErrors
 	}
+	//TODO
 	return Response{}, requestErrors
 }
 
