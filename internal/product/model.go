@@ -14,6 +14,8 @@ type Model struct {
 	Description string
 	Price       float64
 	Stock       int
+	Available   bool
+	Hidden      bool
 }
 
 type CreateRequest struct {
@@ -33,4 +35,6 @@ type Response struct {
 	Description string  `json:"description"`
 	Price       float64 `json:"price"`
 	Stock       int     `json:"stock"`
+	Available   bool    `json:"available"`
+	Hidden      bool    `json:"hidden"`
 }
