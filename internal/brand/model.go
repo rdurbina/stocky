@@ -1,7 +1,7 @@
 package brand
 
 type Model struct {
-	ID   string
+	ID   int
 	Name string
 }
 
