@@ -5,6 +5,8 @@ import (
 	"github.com/rdurbina/stocky/internal/category"
 )
 
+// Product model and DTOs (Requests/Responses) structs
+
 type Model struct {
 	ID          int
 	Name        string

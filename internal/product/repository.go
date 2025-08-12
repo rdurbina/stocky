@@ -21,7 +21,7 @@ type InMemoryRepository struct {
 
 /*InMemoryRepository methods*/
 
-// Retrives a product record from memory
+// Retrieves a product record from memory
 func (in InMemoryRepository) FindById(id int) (Model, error) {
 	value, ok := in.products[id]
 	if !ok {
@@ -58,7 +58,7 @@ func (in InMemoryRepository) Delete(id int) error {
 	return nil
 }
 
-// Creates an instace of an in memory product repository, use only for development purposes
+// Creates an instance of an in memory product repository, use only for development purposes
 func NewInMemoryRepository() Repository {
 	return &InMemoryRepository{
 		productCounter: 0,
